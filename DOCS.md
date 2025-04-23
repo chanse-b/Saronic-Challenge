@@ -17,7 +17,7 @@ python notebook for a data exploration. Purpose is to guide my understanding of 
 ### predCONTROL.ipynb
 This is the python notebook that builds the model to predict the controls given state. There are also metrics and performance data as well. Saves the models in 'Control Models'
 
-### preAHRS.ipynb
+### predAHRS.ipynb
 This is the python notebook that builds the model to predict the next state given the controls and the current state. There are also metrics and performance data as well. Saves the models in 'AHRS Models'
 
 ### plots
