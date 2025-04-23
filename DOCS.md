@@ -47,7 +47,7 @@ Notes: The inputs in the ipynb files are randomized so errors and performance st
 
 # DESIGN DECISONS
 
-My solution assumes that the vehicle dynamics are Markovian — meaning the next vehicle state depends only on the current state and applied control, rather than on the full sequence of previous states or control inputs. Likewise, for predicting a control sequence to reach a desired state, I assume that the requird controls are fully determined by the current state and target state, without needing access to prior history. 
+My solution assumes that the vehicle dynamics are Markovian — meaning the next vehicle state depends only on the current state and the (most recently) applied control, rather than on the full sequence of previous states or control inputs. Likewise, for predicting a control sequence to reach a desired state, I assume that the requird controls are fully determined by the current state and target state, without needing access to prior history. 
 
 FFrom a practical standpoint, attempting to predict full variable-length control sequences introduces a key challenge. These sequences naturally vary in length between different state transitions, leading to inconsistent input and output sizes, which are incompatible with standard feedforward models unless complex padding and truncation are introduced — all of which come with increased training time, memory use, and the need for more powerful hardware, such as a GPU. This would be difficult to support on limited resources, such as a local development environment or a standard MacBook. 
 
