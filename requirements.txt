@@ -1,0 +1,13 @@
+pandas
+numpy
+tqdm
+ipython
+jupyterlab
+scikit-learn
+joblib
+torch
+matplotlib
+streamlit
+ipywidgets
+jupyterlab_widgets
+ipykernel
