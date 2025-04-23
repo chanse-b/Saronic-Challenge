@@ -55,15 +55,15 @@ These sequences naturally vary in length between different state transitions, le
 
 By inspection, I also was able to see the window of the control sequence between timestep t and t+1 were often consistant values for the entirety of the sequence (See Analyzer.ipynb). 
 
-| ts                                    | gear | throttle  | trim | turn     |
-|--------------------------------------|------|-----------|------|----------|
-| 312222 2024-07-31 14:54:42.510909641 | 0    | 0.001221  | 0    | 0.002442 |
-| 312223 2024-07-31 14:54:42.515483645 | 0    | 0.001221  | 0    | 0.002442 |
-| 312224 2024-07-31 14:54:42.532317330 | 0    | 0.003663  | 0    | 0.002442 |
-| 312225 2024-07-31 14:54:42.549252145 | 0    | 0.001221  | 0    | 0.002442 |
-| 312226 2024-07-31 14:54:42.566114331 | 0    | 0.001221  | 0    | 0.002442 |
-| 312227 2024-07-31 14:54:42.582947391 | 0    | 0.001221  | 0    | 0.002442 |
-| 312228 2024-07-31 14:54:42.599776825 | 0    | 0.001221  | 0    | 0.002442 |
+| i     |ts                                   | gear | throttle  | trim | turn|
+|---------------------------------------|------|-----------|------|----------|
+| 312222 |2024-07-31 14:54:42.510909641 | 0    | 0.001221  | 0    | 0.002442 |
+| 312223 |2024-07-31 14:54:42.515483645 | 0    | 0.001221  | 0    | 0.002442 |
+| 312224 |2024-07-31 14:54:42.532317330 | 0    | 0.003663  | 0    | 0.002442 |
+| 312225 |2024-07-31 14:54:42.549252145 | 0    | 0.001221  | 0    | 0.002442 |
+| 312226 |2024-07-31 14:54:42.566114331 | 0    | 0.001221  | 0    | 0.002442 |
+| 312227 |2024-07-31 14:54:42.582947391 | 0    | 0.001221  | 0    | 0.002442 |
+| 312228 |2024-07-31 14:54:42.599776825 | 0    | 0.001221  | 0    | 0.002442 |
 
 This indicates that control values tend to remain nearly static over short time intervals, which supports the Markovian assumption and simplifies the modeling problem, making it measurable and computationally feasible. I did, however, include a simulation option in `driver.py` that enables the sequential prediction of controls by using the state predictor model as a baseline for new sensor data.This assumption significantly simplifies the modeling problem, making it measurable, and computationally feasible.
 
