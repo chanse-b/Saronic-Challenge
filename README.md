@@ -1,5 +1,3 @@
-# Saronic State Prediction Challenge
-
 ## Context
 
 Vehicle dynamics on a robot in the water can be challenging. This challenge is a first pass on understanding the challenges behind how vehicle controls in varying sea states can be difficult. 
@@ -40,10 +38,3 @@ We have provided two dataset files which can be fetched using `git lfs pull` aft
     - ve_mps, vn_mps, and vu_mps are velocities in meters per second in the ENU frame
     - omega_x_dps, omega_y_dps, and omega_z_dps are angular rates in the FRD frame
     - ax_mps2, ay_mps2, and az_mps2 are meter per second^2 accelerations in FRD frame
-
-## Submission
-
-- Send us a git repo with code for the two predictors and instructions on how to run it   
-- Also add a README/document with a description explaining the design for your predictor
-- Any visualizations or plots to accompany your code are encouraged in your document that explains your design
-
